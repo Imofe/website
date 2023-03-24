@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "a d"
+        "a d";
+    grid-template-columns: 1fr 5fr;
+}
+
+.avatar {
+    grid-area: a;
+}
+
+.avatar img {
+    width: 150px;
+    height: 150px;
+}
+
+.descr {
+    grid-area: d;
+}
+
+.descr div {
+    font-size: 23px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    color: #47525E;
+}
+
+.descr .name {
+    font-size: 27px;
+    margin-bottom: 40px;
+}

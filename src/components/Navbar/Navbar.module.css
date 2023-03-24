@@ -1,0 +1,28 @@
+.nav {
+    grid-area: n;
+    background-color: #13CE66;
+    min-height: 100vh;
+}
+
+.item:first-child {
+    margin-top: 13px;
+}
+
+.item {
+    margin-left: 19px;
+    font-size: 27px;
+    font-family: 'Lato', sans-serif;
+}
+
+.item:last-child {
+    margin-top: 30px;
+}
+
+.item a {
+    text-decoration: none;
+    color: white;
+}
+
+.item a:focus {
+    color: #47525E;
+}

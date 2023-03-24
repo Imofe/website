@@ -1,0 +1,11 @@
+.item {
+    color: brown;
+    margin-bottom: 20px;
+}
+
+.item img {
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    margin-right: 5px;
+}
