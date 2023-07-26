@@ -5,13 +5,14 @@
 }
 
 .item:first-child {
-    margin-top: 13px;
+    margin-top: 15px;
 }
 
 .item {
     margin-left: 19px;
     font-size: 27px;
     font-family: 'Lato', sans-serif;
+    margin-bottom: 5px;
 }
 
 .item:last-child {

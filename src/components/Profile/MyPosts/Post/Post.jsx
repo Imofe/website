@@ -5,11 +5,12 @@ const Post = (props) => {
     return (
         <div className={s.item}>
             <div>
-                <img src='https://www.pngall.com/wp-content/uploads/12/Avatar-PNG-Image.png'></img>
-                {props.message}
+                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/768px-Sign-check-icon.png' alt='avatarka'></img>
             </div>
-            <div>
-                <span>like</span> {props.likesCount}
+            <div className={s.description}>
+                {props.message}
+                <br/>
+                <span>Like:</span> {props.likesCount}
             </div>
         </div>
     )

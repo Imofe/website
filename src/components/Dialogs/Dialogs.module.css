@@ -4,23 +4,28 @@
 }
 
 .messages {
-    padding-left: 47px;
+    padding-left: 100px;
     padding-top: 20px;
 }
 
 .head {
     font-family: 'Lato', sans-serif;
-    color: #47525E;
     font-size: 23px;
     padding-left: 5px;
     margin-bottom: 10px;
 }
 
+.head a {
+    text-decoration: none;
+    color: #47525E;
+}
+
 .dialogsItems {
     padding-left: 47px;
     padding-top: 20px;
-    border-right: 1px solid #8190A5;
 }
+
+
 
 
 

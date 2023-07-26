@@ -7,11 +7,13 @@ const Profile = (props) => {
     return (
         <div className={s.content}>
             <div className={s.city}>
-                <img src='https://i.pinimg.com/originals/10/db/68/10db68ad6f13b3cc5de36c5af8ebc610.jpg'></img>
+                <img src='https://i.pinimg.com/originals/10/db/68/10db68ad6f13b3cc5de36c5af8ebc610.jpg' alt='main_photo'></img>
             </div>
-            <Description site='Dota2.com' name='Mr. Pudge' date='77.77.7777'
-                         city='Dire' education='URFU Sharaga'/>
-            <MyPosts posts={props.state.posts}/>
+            <Description site='demonslayer.com' name='Muichiro Tokito' date='15.04.1859'
+                         city='Tokyo' education='UrFU'/>
+            <MyPosts posts={props.profilePage.posts}
+                     dispatch={props.dispatch}
+                     newPostText={props.profilePage.newPostText}/>
         </div>
     )
 }

@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+}
+
+.dialogs {
+    display: block;
+    min-width: 250px;
+    max-width: 250px;
+    border-right: 1px #47525E solid;
+}
+
+.dialog {
+    margin-bottom: 30px;
+}
+
+.dialog a {
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: #8190A5;
+    font-size: 18px;
+}
+
+.dialog a:focus {
+    color: #47525E;
+    font-size: 20px;
+}
+
+.messages {
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+}

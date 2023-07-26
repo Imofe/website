@@ -13,12 +13,13 @@
 }
 
 .avatar img {
-    width: 150px;
+    width: 220px;
     height: 150px;
 }
 
 .descr {
     grid-area: d;
+    margin-bottom: 15px;
 }
 
 .descr div {
@@ -32,4 +33,8 @@
 .descr .name {
     font-size: 27px;
     margin-bottom: 40px;
+}
+
+.descr .item {
+    margin-bottom: 5px;
 }
