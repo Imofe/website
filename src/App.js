@@ -4,7 +4,6 @@ import Navbar from './components/Navbar/Navbar';
 import {Route, Routes, BrowserRouter} from "react-router-dom";
 import Dialogs from './components/Dialogs/Dialogs';
 import Profile from "./components/Profile/Profile";
-
 const App = (props) => {
     return (
         <BrowserRouter>
@@ -13,14 +12,10 @@ const App = (props) => {
                 <Navbar/>
                 <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path='/' element={<Profile profilePage={props.state.profilePage}
-                                                          dispatch={props.dispatch}/>}/>
-                        <Route path='/dialogs' element={<Dialogs dialogsPage={props.state.dialogsPage}
-                                                                 dispatch={props.dispatch}/>}/>
-                        <Route path='/dialogs/:dialogID' element={<Dialogs dialogsPage={props.state.dialogsPage}
-                                                                           dispatch={props.dispatch}/>}/>
-                        <Route path='/profile' element={<Profile profilePage={props.state.profilePage}
-                                                                 dispatch={props.dispatch}/>}/>
+                        <Route path='/' element={<Profile store={props.store}/>}/>
+                        <Route path='/profile' element={<Profile store={props.store}/>}/>
+                        <Route path='/dialogs' element={<Dialogs store={props.store}/>}/>
+                        <Route path='/dialogs/:dialogID' element={<Dialogs store={props.store}/>}/>
                     </Routes>
                 </div>
             </div>

@@ -42,7 +42,3 @@ let store = {
         this._callSubscriber(this._state);
     }
 }
-
-window.store = store;
-
-export default store;

@@ -1,7 +1,6 @@
 import React from 'react';
 import s from "./Messages.module.css";
 import {useParams} from "react-router-dom";
-import {updateNewMessageTextActionCreator, addMessageActionCreator} from "../../../redux/dialogs-reducer";
 
 const Messages = (props) => {
 
@@ -11,7 +10,7 @@ const Messages = (props) => {
 
     const onMessageChange = () => {
         let message = _textMessage.value;
-        props.dispatch(updateNewMessageTextActionCreator(message))
+        props.onMessageChange(message)
     }
 
     const sendMessage = () => {
@@ -20,7 +19,7 @@ const Messages = (props) => {
             alert('Поле не может быть пустым')
             return;
         }
-        props.dispatch(addMessageActionCreator(dialogID))
+        props.addMessage(dialogID)
     }
     const getMessages = (array) => {
         return array

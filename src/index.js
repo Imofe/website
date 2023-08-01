@@ -3,23 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import store from "./redux/store";
-
-
-
+import store from "./redux/redux-store";
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
 const renderTree = () => {
     root.render(
         <React.StrictMode>
-            <App state={store.getState()}
-                 dispatch={store.dispatch.bind(store)}/>
+            <App store={store}/>
         </React.StrictMode>
     );
 }
 
 renderTree();
 
-store.subscribe(renderTree);
+store.subscribe(() => {
+    let state = store.getState();
+    renderTree(state);
+});
 
 reportWebVitals();

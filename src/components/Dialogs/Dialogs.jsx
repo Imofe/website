@@ -1,14 +1,16 @@
 import React from 'react';
 import s from './Dialogs.module.css';
 import Users from "./Users/Users";
-import Messages from "./Messages/Messages";
 import {NavLink} from "react-router-dom";
+import MessagesContainer from "./Messages/MessagesContainer";
 
 
 
 const Dialogs = (props) => {
 
-    const users = props.dialogsPage.users.map( d => <Users name={d.name} id={d.id} />)
+    let state = props.store.getState()
+
+    const users = state.dialogsPage.users.map(d => <Users name={d.name} id={d.id} />)
 
     return (
         <div>
@@ -20,9 +22,7 @@ const Dialogs = (props) => {
                     {users}
                 </div>
                 <div className={s.messages}>
-                    <Messages users={props.dialogsPage.users}
-                              dispatch={props.dispatch}
-                              newMessageText={props.dialogsPage.newMessageText}/>
+                    <MessagesContainer store={props.store}/>
                 </div>
             </div>
         </div>

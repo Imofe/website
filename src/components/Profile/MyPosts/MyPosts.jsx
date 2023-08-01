@@ -1,8 +1,6 @@
 import React from "react";
 import s from './MyPosts.module.css';
 import Post from "./Post/Post";
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/profile-reducer";
-
 const MyPosts = (props) => {
     let postsElements = props.posts.map( p => <Post message={p.message} likesCount={p.likesCount}/>)
 
@@ -13,12 +11,14 @@ const MyPosts = (props) => {
             alert('Поле не может быть пустым')
             return;
         }
-        props.dispatch(addPostActionCreator());
+        props.addPost();
+        // props.dispatch(addPostActionCreator());
     }
 
     const onPostChange  = () => {
         let text = _textElement.value;
-        props.dispatch(updateNewPostTextActionCreator(text));
+        props.updateNewPostText(text);
+        // props.dispatch(updateNewPostTextActionCreator(text));
     }
 
     return (

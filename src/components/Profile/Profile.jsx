@@ -1,7 +1,7 @@
 import React from "react";
 import Description from "./Description/Description";
-import MyPosts from "./MyPosts/MyPosts";
 import s from './Profile.module.css';
+import MyPostsContainer from "./MyPosts/MyPostContainer";
 
 const Profile = (props) => {
     return (
@@ -11,9 +11,7 @@ const Profile = (props) => {
             </div>
             <Description site='demonslayer.com' name='Muichiro Tokito' date='15.04.1859'
                          city='Tokyo' education='UrFU'/>
-            <MyPosts posts={props.profilePage.posts}
-                     dispatch={props.dispatch}
-                     newPostText={props.profilePage.newPostText}/>
+            <MyPostsContainer store={props.store}/>
         </div>
     )
 }
