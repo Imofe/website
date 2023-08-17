@@ -3,7 +3,7 @@ import s from "./Messages.module.css";
 import {useParams} from "react-router-dom";
 
 const Messages = (props) => {
-
+    debugger;
     const { dialogID} = useParams()
 
     let _textMessage = '';
@@ -27,15 +27,25 @@ const Messages = (props) => {
             .map(message => <div className={s.message}>— {message}</div>)
     }
 
+    const getInput = () => {
+        if (dialogID !== undefined) {
+            return (
+                <>
+                    <textarea onChange={onMessageChange} ref={(a) => _textMessage = a}
+                              value={props.newMessageText}/>
+                    <button onClick={sendMessage}>Send</button>
+                </>
+            )
+        }
+    }
+
     return (
         <>
             <div className={s.messages}>
                 {getMessages(props.users)}
             </div>
             <div className={s.text}>
-                <textarea onChange={onMessageChange} ref={(a) => _textMessage = a}
-                          value={props.newMessageText}/>
-                <button onClick={sendMessage}>Send</button>
+                {getInput()}
             </div>
         </>
     );

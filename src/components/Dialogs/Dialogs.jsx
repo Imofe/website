@@ -7,10 +7,7 @@ import MessagesContainer from "./Messages/MessagesContainer";
 
 
 const Dialogs = (props) => {
-
-    let state = props.store.getState()
-
-    const users = state.dialogsPage.users.map(d => <Users name={d.name} id={d.id} />)
+    const users = props.dialogsPage.users.map(d => <Users name={d.name} id={d.id} />)
 
     return (
         <div>
@@ -22,7 +19,7 @@ const Dialogs = (props) => {
                     {users}
                 </div>
                 <div className={s.messages}>
-                    <MessagesContainer store={props.store}/>
+                    <MessagesContainer/>
                 </div>
             </div>
         </div>
